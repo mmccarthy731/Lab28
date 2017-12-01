@@ -54,7 +54,7 @@ namespace WebApplication3.Controllers
 
             List<Movy> movies = new List<Movy>();
 
-            if (!int.TryParse(Number, out int num))
+            if (!int.TryParse(Number, out int num) || num < 1 || num > ORM.Movies.Count())
             {
                 return movies;
             }
